@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 .navbar-container{
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 75px;
+    height: 100px;
     background-color: #ECEFF4;
     box-shadow: 0 4px 5px #D8DEE9;
 
@@ -17,9 +17,19 @@
     align-items:center;
     margin-right: 20px;
 }
+
+.navbar-left{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    margin-left: 20px;
+}
 .login-navBar,.cart-navBar{
     padding: 0px 10px;
 
+}
+.logo-navBar{
+    height: 75px;
 }
 ul{
     display: flex;
@@ -29,7 +39,7 @@ ul{
     padding: 0px;
 }
 li{
-    margin:10px 15px;
+    margin:0px 15px;
     text-align: center;
 }
 a{
@@ -50,9 +60,7 @@ a{
 }
 
 body{
-    font-family: 'Lato', sans-serif;
-
-
-
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
 }
 
