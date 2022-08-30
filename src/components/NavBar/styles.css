@@ -60,7 +60,59 @@ a{
 }
 
 body{
+    margin: 0px;
+    padding: 0px;
     font-family: 'Varela Round', sans-serif;
     font-weight: 600;
 }
+.itemCount-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 180px;
+    background-color: #ECEFF4;
+    box-shadow: 0 4px 5px #D8DEE9;
+    border-radius: 10px;
+    margin: 0px auto;
+    color:#5E81AC;
 
+}
+.item-count{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px;
+    background-color: white;
+    border-radius: 10px;
+
+
+}
+.btn-count{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 0px 15px;
+    border: none;
+    background-color: transparent;
+    cursor:pointer;
+    color: #88C0D0;
+}
+.contador{
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px 15px;
+}
+.btn-add{
+    background-color: #5E81AC;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+}
+.item-add{
+    margin:20px 0px;
+}
