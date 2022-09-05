@@ -29,7 +29,8 @@
 
 }
 .logo-navBar{
-    height: 75px;
+    height: 40px;
+    margin: 0px 15px;
 }
 ul{
     display: flex;
@@ -64,6 +65,7 @@ body{
     padding: 0px;
     font-family: 'Varela Round', sans-serif;
     font-weight: 600;
+    /* background-color: rgb(206, 206, 241); */
 }
 .itemCount-container{
     display: flex;
@@ -115,4 +117,30 @@ body{
 }
 .item-add{
     margin:20px 0px;
+}
+#ItemListContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 96%;
+    margin: 60px auto;
+    background-color: white;
+}
+
+.ImgProduct{
+    border-radius: 20px;
+    width: 341px;
+    height:341px;
+}
+.NameProduct, .DescProduct,
+.PriceProduct{
+    margin: 5px 0px;
+}
+.title{
+    font-size: 50px;
+}
+.Loading{
+    font-size: 30px;
+    color:#5E81AC;
+    margin: 0px auto;
 }
