@@ -5,6 +5,11 @@ import ItemList from './ItemList';
 import './NavBar/styles.css'
 
 const ItemListContainer = () => {
+
+    // const onAdd = (cantidad) => {
+    //     console.log(`elegiste ${cantidad} productos`);
+    // }
+
     const [items, setItems]=useState([]);
     const getData = new Promise ((resolve, reject) => {
         setTimeout(() => {
@@ -21,6 +26,8 @@ const ItemListContainer = () => {
         
     
     <div id='ItemListContainer'>
+
+        {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
         {items.length > 0 ? 
         (<ItemList itemsList={items}/>):
         (<div className='Loading'>Loading...</div>)}

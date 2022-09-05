@@ -1,29 +1,31 @@
-// import {useState} from 'react';
-// import './NavBar/styles.css'
+import {useState} from 'react';
+import './NavBar/styles.css'
 
-// const ItemCount = ({stock,initial={1}, onAdd={onAdd}}) =>{ 
+const ItemCount = ({stock, initial, onAdd}) => { 
 
-// const [cantidad, setCantidad] = useState(initial);
+const [cantidad, setCantidad] = useState(initial);
 
-//     const sumaItem = () =>
-//         cantidad < stock ? setCantidad(stock) : setCantidad(cantidad + 1);
-//     const restaItem = () =>
-//         cantidad > initial ? setCantidad(cantidad - 1) : setCantidad(0);
-//     return (
-//         <div className="itemCount-container">
+    const sumaItem = () =>
+        cantidad < stock ?  setCantidad(cantidad + 1) :  setCantidad(stock);
+    const restaItem = () =>
+        cantidad > initial ? setCantidad(cantidad - 1) : setCantidad(initial);
+    const confirm = () => 
+        cantidad > 0 ? onAdd(cantidad) : console.log(`sin stock`);
+    return (
+        <div className="itemCount-container">
 
-//             <div className ="item-count">
-//                 <button className="btn-count" onClick = {restaItem}> - </button>
-//                     <p className="contador">{cantidad}</p>
-//                 <button className="btn-count" onClick = {sumaItem}> + </button>
-//             </div>
+            <div className ="item-count">
+                <button className="btn-count" onClick = {restaItem}> - </button>
+                    <p className="contador">{cantidad}</p>
+                <button className="btn-count" onClick = {sumaItem}> + </button>
+            </div>
 
-//             <div className="item-add">
-//                 <button className="btn-add">Add to cart</button>
-//             </div>
+            <div className="item-add">
+                <button className="btn-add" onClick = {() => confirm(cantidad)}>Add to cart</button>
+            </div>
 
-//         </div>
-//     )
-// }
+        </div>
+    ) 
+}
 
-// export default ItemCount;
+export default ItemCount;
