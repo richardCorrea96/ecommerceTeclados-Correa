@@ -11,6 +11,7 @@ const ItemListContainer = () => {
     // }
 
     const [items, setItems]=useState([]);
+
     const getData = new Promise ((resolve, reject) => {
         setTimeout(() => {
             resolve(data);
@@ -22,17 +23,15 @@ const ItemListContainer = () => {
             console.log(result);
         })
     }, [])
-    return (
-        
-    
-    <div id='ItemListContainer'>
 
+    return (
+
+    <div id='ItemListContainer'>
         {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
         {items.length > 0 ? 
         (<ItemList itemsList={items}/>):
         (<div className='Loading'>Loading...</div>)}
     </div>
-    
     );
 };
 

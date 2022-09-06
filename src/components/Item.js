@@ -1,7 +1,6 @@
 //esto es lo que se genera por cada uno de los productos
 import './NavBar/styles.css'
 
-
 const Item = ({name, description,image, price}) => {
     return (
     <div>

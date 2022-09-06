@@ -136,6 +136,10 @@ body{
 .PriceProduct{
     margin: 5px 0px;
 }
+.PriceProduct{
+    color: #5E81AC;
+
+}
 .title{
     font-size: 50px;
 }
