@@ -29,7 +29,7 @@ const ItemListContainer = () => {
     <div id='ItemListContainer'>
         {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
         {items.length > 0 ? 
-        (<ItemList itemsList={items}/>):
+        (<ItemList itemsList {...items}/>):
         (<div className='Loading'>Loading...</div>)}
     </div>
     );

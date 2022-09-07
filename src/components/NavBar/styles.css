@@ -126,8 +126,47 @@ body{
     margin: 60px auto;
     background-color: white;
 }
+#ItemDetailContainter{
+    display:flex;
+    flex-direction: row;
+    max-width: 73%;
+    margin: 50px auto;
+    justify-content: space-between;
+
+}
+.ItemImgDetail{
+    display:flex;
+    width: 730px;
+    height: 730px;
+}
+.ImgDetail{
+    display:flex;
+    width: 730px;
+    height: 730px;
+    border-radius: 30px;
+}
+.ItemDetail{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 580px;
+}
+.nameDetail{
+    font-size: 27px;
+    margin: 10px 0px;
+}
+.priceDetail{
+    font-size: 35px;
+    margin: 10px 0px;
+}
+.descDetail{
+    text-align: left;
+    color: #5E81AC;
+}
+
 
 .ImgProduct{
+    display: flex;
     border-radius: 20px;
     width: 341px;
     height:341px;
