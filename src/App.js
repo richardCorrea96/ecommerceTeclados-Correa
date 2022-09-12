@@ -3,12 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainter from './components/ItemDetailContainter';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Keyboards from './components/NavBar/Keyboards';
-import Keycaps from './components/NavBar/Keycaps'
-import Switches from './components/NavBar/Switches'
-import Deskpads from './components/NavBar/Deskpads';
-import Supplies from './components/NavBar/Supplies'
-import Merch from './components/NavBar/Merch';
+
 
 function App() {
   return (

@@ -8,10 +8,8 @@ const ItemList = ({itemsList}) => {
         {itemsList.map((producto) => {
             return <Item
             key={producto.id}
-            name={producto.name}
-            description={producto.shortDesc}
-            price={producto.price}
-            image={producto.image} 
+            //correccion
+            {...producto}
             />
             })}
         </>

@@ -1,16 +1,17 @@
 import './NavBar/styles.css'
 
-const ItemDetail = ({itemDetail}) => {
+//correccion 
+const ItemDetail = ({name, image, price, fullDesc}) => {
 
     return (
             <>
             <div className='ItemImgDetail'>
-                <img className='ImgDetail' src={itemDetail.image} alt={itemDetail.name}/>
+                <img className='ImgDetail' src={image} alt={name}/>
             </div>
             <div className='ItemDetail'>
-                <p className='nameDetail'>{itemDetail.name}</p>
-                <p className='priceDetail'>{itemDetail.price}</p>
-                <p className='descDetail'>{itemDetail.fullDesc}</p>
+                <p className='nameDetail'>{name}</p>
+                <p className='priceDetail'>{price}</p>
+                <p className='descDetail'>{fullDesc}</p>
 
             </div>
             </>

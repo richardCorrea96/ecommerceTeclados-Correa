@@ -14,7 +14,7 @@ const ItemDetailContainter = () => {
             const producto = data.find(item=>item.id === parseInt(id));
             setTimeout(() => {
                 resolve(producto);
-            }, 2000)
+            }, 1000)
         })
     } 
     useEffect(() => {
@@ -27,7 +27,8 @@ const ItemDetailContainter = () => {
 
     return (
         <div id='ItemDetailContainter'>
-            <ItemDetail itemDetail ={item}/>
+            {/*pasé por props a ItemDetail haciendo spread  en vez de igualarlo*/}
+            <ItemDetail itemDetail {...item}/>
         </div>
     );
 };
