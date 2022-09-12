@@ -2,26 +2,33 @@ import './styles.css'
 import logo from '../../imagenes/logo.png';
 import userIcon from '../../imagenes/user.png'
 import CartWidget from './CartWidget'
-
+import {Link, NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
 
         <div className='navbar-container'>
             <div className="navbar-left">
-                <a href='#'><img className="logo-navBar" src={logo} alt="logo" /></a>
+                <Link to="/">
+                    <img className="logo-navBar" src={logo} alt="logo" />
+                </Link>
                 <div>
                     <ul>
-                        <li><a href="#">Keyboards</a></li>
-                        <li><a href="#">Keycaps</a></li>
-                        <li><a href="#">Switches</a></li>
-                        <li><a href="#">Deskpads</a></li>
-                        <li><a href="#">Supplies</a></li>
-                        <li><a href="#">Merch!</a></li>
+                        <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"}
+                        to="/category/keyboards">Keyboards</NavLink></li>
+                        <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"}
+                        to="/category/keycaps">Keycaps</NavLink></li>
+                        <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"} 
+                        to="/category/switches">Switches</NavLink></li>
+                        <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"} 
+                        to="/category/deskpads">Deskpads</NavLink></li>
+                        <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"} 
+                        to="/category/supplies">Supplies</NavLink></li>
+                        <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"} 
+                        to="/category/merch">Merch!</NavLink></li>
                     </ul>
                 </div>
             </div>
-
 
             <div className="navbar-right">
                 <div className="login-navBar">

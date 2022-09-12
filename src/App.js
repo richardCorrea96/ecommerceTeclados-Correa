@@ -1,20 +1,31 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-// import ItemListContainer from './components/ItemListContainer'
+import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainter from './components/ItemDetailContainter';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Keyboards from './components/NavBar/Keyboards';
+import Keycaps from './components/NavBar/Keycaps'
+import Switches from './components/NavBar/Switches'
+import Deskpads from './components/NavBar/Deskpads';
+import Supplies from './components/NavBar/Supplies'
+import Merch from './components/NavBar/Merch';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      {/* <h2 className="title">New arrival</h2> */}
-      {/* <ItemListContainer /> */}
-      <ItemDetailContainter />
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>}/>
+            <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+            <Route path="/item/:productId" element={<ItemDetailContainter/>}/>
+            {/* 
+            <ItemListContainer />
+            <ItemDetailContainter /> */}
+          </Routes>
+      </div>
+    </BrowserRouter>
+
   );
 }
-
 export default App;
