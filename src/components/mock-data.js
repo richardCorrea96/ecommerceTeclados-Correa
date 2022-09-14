@@ -19,7 +19,7 @@ const data = [
         fullDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         price: '$200',
         image: 'https://i.pinimg.com/originals/0f/a3/d2/0fa3d223e7c4ebae02c43db3a4622586.jpg',
-        stock: 10,
+        stock: 6,
         category: 'keycaps',
 
     }

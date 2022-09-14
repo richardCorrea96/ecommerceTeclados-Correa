@@ -1,9 +1,9 @@
 //esto es lo que se genera por cada uno de los productos
-import './NavBar/styles.css'
+import './styles.css'
 import {Link} from 'react-router-dom'
 const Item = ({name, shortDesc,image, price, id}) => {
     return (
-    <div>
+    <div className="productCard">
         <Link to={`/item/${id}`}>
             <img className="ImgProduct" src={image} alt={name}/>
         </Link>

@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainter from './components/ItemDetailContainter';
@@ -14,9 +13,6 @@ function App() {
             <Route path="/" element={<ItemListContainer/>}/>
             <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
             <Route path="/item/:productId" element={<ItemDetailContainter/>}/>
-            {/* 
-            <ItemListContainer />
-            <ItemDetailContainter /> */}
           </Routes>
       </div>
     </BrowserRouter>

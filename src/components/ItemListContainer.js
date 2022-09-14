@@ -5,6 +5,7 @@ import ItemList from './ItemList';
 import './NavBar/styles.css'
 import {useParams} from 'react-router-dom'
 
+
 const ItemListContainer = () => {
     const {categoryId} = useParams();
     console.log('categoryId', categoryId);
@@ -28,14 +29,11 @@ const ItemListContainer = () => {
     }, [categoryId]);
 
     return (
-
     <div id='ItemListContainer'>
         {items.length > 0 ? 
         (<ItemList itemsList ={items}/>):
         (<div className='Loading'>Loading...</div>)}
     </div>
     );
-};
-
-
+}
 export default ItemListContainer;
