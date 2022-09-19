@@ -250,8 +250,7 @@ body{
 }
 
 .seguir-comprando{
-    background-color: #88C0D0
-    ;
+    background-color: #88C0D0;
     border: none;
     border-radius: 10px;
     color: white;
@@ -265,6 +264,82 @@ body{
 }
 .seguir-comprando:hover{
     transition-duration: 300ms;
-    background-color: #A3BE8C
+    background-color: #A3BE8C;
+}
+.xd{
+
+    margin: auto;
+    width: 70%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:2px solid #5E81AC;
+}
+.imgInCart{
+    margin-bottom:20px;
+    margin-top:20px;
+    margin-right:20px;
+    border-radius: 10px;
+    width: 100px;
+    height: 80px;
+}
+.nombreImagen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.opiti{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.removeItem{
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    background-color: #5E81AC;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.botonescart{
+    margin: auto;
+    margin-top: 30px;
+    width: 70%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 50px;
+
+}
+.clearCartBtn{
+    background-color: #88C0D0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    width:275px;
+    height: 50px;
+    margin-right: 30px;
+
+}
+.checkOutBtn{
+    background-color: #5e81ace4 ;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    width:275px;
+    height: 50px;
 
 }

@@ -3,7 +3,6 @@ import logo from '../../imagenes/logo.png';
 import userIcon from '../../imagenes/user.png'
 import CartWidget from './CartWidget/CartWidget'
 import {Link, NavLink} from 'react-router-dom'
-
 const NavBar = () => {
     return (
 
@@ -36,7 +35,9 @@ const NavBar = () => {
                         <img className='img-btn-navBar' src={userIcon} alt='user'/>
                     </button>
                 </div>
-                <div className="cart-navBar"> <CartWidget /> </div>
+                <Link to="/cart">                
+                    <div className="cart-navBar"><CartWidget /> </div>
+                </Link>
             </div>
         </div>
         

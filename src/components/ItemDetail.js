@@ -1,19 +1,22 @@
 import './NavBar/styles.css'
 import ItemCount from './ItemCount'
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import {Link} from 'react-router-dom'
+import { CartContext } from '../context/CartContext';
 
 
 //correccion 
 
 
-const ItemDetail = ({name, image, price, fullDesc, stock}) => {
+const ItemDetail = ({id ,name, image, price, fullDesc, stock}) => {
 
+    const {addItem} = useContext(CartContext);
     const [contador, setContador] = useState(0);
     
     const onAdd = (dato) =>{
         console.log(`hizo click ${dato}`)
         setContador(dato)
+        addItem(id ,name, image, price, dato)
     }
     return (
             <>
@@ -28,7 +31,7 @@ const ItemDetail = ({name, image, price, fullDesc, stock}) => {
                     contador ?
                     <div className="se-agrego-al-carrito">
                         <Link to="/"> <button className='seguir-comprando'>Seguir comprando</button></Link>
-                        <button className='ir-al-carrito'>Ir al carrito</button>
+                        <Link to="/cart"><button className='ir-al-carrito'>Ir al carrito</button></Link>
                     </div> :
                     <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
                 }
