@@ -31,9 +31,7 @@ const NavBar = () => {
 
             <div className="navbar-right">
                 <div className="login-navBar">
-                    <button className='btn-navBar'>
-                        <img className='img-btn-navBar' src={userIcon} alt='user'/>
-                    </button>
+                        <img className='userIcon' src={userIcon} alt='user'/>
                 </div>
                 <Link to="/cart">                
                     <div className="cart-navBar"><CartWidget /> </div>

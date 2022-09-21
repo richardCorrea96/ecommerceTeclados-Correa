@@ -9,8 +9,7 @@ const [cantidad, setCantidad] = useState(initial);
         cantidad < stock ?  setCantidad(cantidad + 1) :  setCantidad(stock);
     const restaItem = () =>
         cantidad > initial ? setCantidad(cantidad - 1) : setCantidad(initial);
-    // const confirm = () => 
-    //     cantidad > 0 ? onAdd(cantidad) : console.log(`sin stock`);
+
     return (
 
         <div className="itemCount-container">

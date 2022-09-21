@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 export const CartContext = React.createContext();
 
@@ -7,47 +7,51 @@ export const CartProvider =({children})=> {
     //// ayuda
     const [productCartList, setProductCartList] = useState([])
 
-    const [productQuantity, setProductQuantity] = useState(0);
-
-    /////ayuda
-    const getProductQuantity = ()=>{
-        let quantity = 0;
-        productCartList.forEach(product=>(quantity += product.quantity));
-        setProductQuantity(quantity);
-    }
-    useEffect(()=>{
-        getProductQuantity()},
-        [productCartList]);
-
-    const addItem = (product) => {
+    const addItem = (item, quantity) => {
        ///ayuda
-        if (isInCart(product.id)){
-            const productInArray = productCartList.find(prod => prod.id === product.id);
-            const foundProductIndex = productCartList.indexOf(productInArray);
-            /////////////////
-            const auxProducts = [...productCartList] 
-            auxProducts[foundProductIndex].quantity += product.quantity
-            setProductCartList(auxProducts)
+        const newProduct = {
+        ...item,
+        quantity
+        }
+        if (isInCart(item.id)){
+            const productPos = productCartList.findIndex(product => product.id === item.id);
+            const newArreglo = [...productCartList];
+            newArreglo[productPos].quantity = newArreglo[productPos].quantity + quantity
+            newArreglo[productPos].quantityPrice = newArreglo[productPos].quantity * newArreglo[productPos].price;
+            setProductCartList(newArreglo)
         }else {
-            setProductCartList([...productCartList,product])
+            const newArreglo = [...productCartList];
+            newProduct.quantityPrice = newProduct.quantity * newProduct.price;
+            newArreglo.push(newProduct);
+            setProductCartList(newArreglo);
         }
     }
-/// id del mock ////
     const isInCart =(id)=>{
-        return productCartList.some(product=>product.id === id)
+        const productExist = productCartList.some(product=>product.id === id)
+        return productExist;
     }
-
+    
     const removeItem = (id) =>{
         const newArreglo = productCartList.filter(product=>product.id !== id);
         setProductCartList(newArreglo);
     }
     const clear =()=>{
-        setProductQuantity(0);
         setProductCartList([]);
     }
+    const getTotalPrice =()=>{
+        // after context, 00:35
+        const totalPrice = productCartList.reduce((acc, item)=>acc + item.quantityPrice, 0);
+        console.log(totalPrice);
+        return totalPrice;
+    }
+    const getTotalProducts =()=>{
+        const totalProducts = productCartList.reduce((acc, item)=>acc + item.quantity, 0);
+        return totalProducts;
 
+    }
     return(
-        <CartContext.Provider value={{productCartList, addItem, removeItem,clear}}>
+        <CartContext.Provider value={{productCartList, addItem, removeItem,clear,
+        isInCart, getTotalPrice, getTotalProducts}}>
             {children}
         </CartContext.Provider>
     )

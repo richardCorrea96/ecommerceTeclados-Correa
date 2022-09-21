@@ -8,7 +8,7 @@ import { CartContext } from '../context/CartContext';
 //correccion 
 
 
-const ItemDetail = ({id ,name, image, price, fullDesc, stock}) => {
+const ItemDetail = (item) => {
 
     const {addItem} = useContext(CartContext);
     const [contador, setContador] = useState(0);
@@ -16,26 +16,25 @@ const ItemDetail = ({id ,name, image, price, fullDesc, stock}) => {
     const onAdd = (dato) =>{
         console.log(`hizo click ${dato}`)
         setContador(dato)
-        addItem(id ,name, image, price, dato)
+        addItem(item, dato)
     }
     return (
             <>
             <div className='ItemImgDetail'>
-                <img className='ImgDetail' src={image} alt={name}/>
+                <img className='ImgDetail' src={item.image} alt={item.name}/>
             </div>
             <div className='ItemDetail'>
-                <p className='nameDetail'>{name}</p>
-                <p className='priceDetail'>{price}</p>
-                <p className='descDetail'>{fullDesc}</p>
+                <p className='nameDetail'>{item.name}</p>
+                <p className='priceDetail'>$ {item.price}</p>
+                <p className='descDetail'>{item.fullDesc}</p>
                 {
                     contador ?
                     <div className="se-agrego-al-carrito">
-                        <Link to="/"> <button className='seguir-comprando'>Seguir comprando</button></Link>
-                        <Link to="/cart"><button className='ir-al-carrito'>Ir al carrito</button></Link>
+                        <Link to="/"> <button className='seguir-comprando'>Continue Shopping</button></Link>
+                        <Link to="/cart"><button className='ir-al-carrito'>Go to cart</button></Link>
                     </div> :
-                    <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
                 }
-                
             </div>
             </>
 );

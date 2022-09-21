@@ -9,7 +9,7 @@ const Item = ({name, shortDesc,image, price, id}) => {
         </Link>
         <p className="NameProduct">{name}</p>
         <p className="DescProduct">{shortDesc}</p>
-        <p className="PriceProduct">{price}</p>
+        <p className="PriceProduct">$ {price}</p>
     </div>
     );
 };
