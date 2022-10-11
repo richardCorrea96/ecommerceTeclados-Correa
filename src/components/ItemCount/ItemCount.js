@@ -1,5 +1,6 @@
 import {useState} from 'react';
-import './NavBar/styles.css'
+import '../../styles.css'
+
 
 const ItemCount = ({stock, initial, onAdd}) => { 
 
@@ -9,6 +10,8 @@ const [cantidad, setCantidad] = useState(initial);
         cantidad < stock ?  setCantidad(cantidad + 1) :  setCantidad(stock);
     const restaItem = () =>
         cantidad > initial ? setCantidad(cantidad - 1) : setCantidad(initial);
+
+
 
     return (
 
@@ -22,9 +25,8 @@ const [cantidad, setCantidad] = useState(initial);
                     <button className="btn-count-resta" onClick = {restaItem}> ▼ </button>
                 </div>
             </div>
-
             <div className="item-add">
-                <button className="btn-add" onClick = {()=>onAdd(cantidad)}>Add to cart</button>
+                <button  className="btn-add" onClick = {()=>onAdd(cantidad) } >Add to cart</button>
             </div>
         </div>
     ) 

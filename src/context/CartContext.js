@@ -1,5 +1,7 @@
 import React from 'react';
 import {useState} from 'react'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = React.createContext();
 
@@ -31,17 +33,35 @@ export const CartProvider =({children})=> {
         return productExist;
     }
     
+
+    const removeToast = () => toast.info("Removed product ❌!",
+    {
+        position: "bottom-right",
+        autoClose: 1500,
+        theme: "colored",
+    });
+
+    const emptyToast = () => toast.warn("Empty cart 🕳️!",
+    {
+        position: "bottom-right",
+        autoClose: 1500,
+        theme: "colored",
+    });
+
+
     const removeItem = (id) =>{
+
         const newArreglo = productCartList.filter(product=>product.id !== id);
         setProductCartList(newArreglo);
+        removeToast()
     }
     const clear =()=>{
         setProductCartList([]);
+        emptyToast()
     }
     const getTotalPrice =()=>{
         // after context, 00:35
         const totalPrice = productCartList.reduce((acc, item)=>acc + item.quantityPrice, 0);
-        console.log(totalPrice);
         return totalPrice;
     }
     const getTotalProducts =()=>{

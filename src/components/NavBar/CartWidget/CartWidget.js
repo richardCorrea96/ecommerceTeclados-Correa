@@ -1,5 +1,5 @@
-import cartIcon from '../../../imagenes/bag.png';
-import '../styles.css';
+import cartIcon from '../../../images/bag.png';
+import '../../../styles.css';
 import {Link} from 'react-router-dom';
 import {useContext} from 'react';
 import {CartContext} from '../../../context/CartContext'

@@ -1,6 +1,6 @@
-import './styles.css'
-import logo from '../../imagenes/logo.png';
-import userIcon from '../../imagenes/user.png'
+import '../../styles.css'
+import logo from '../../images/logo.png';
+import userIcon from '../../images/user.png'
 import CartWidget from './CartWidget/CartWidget'
 import {Link, NavLink} from 'react-router-dom'
 const NavBar = () => {

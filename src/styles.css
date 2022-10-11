@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+
 .navbar-container{
     display: flex;
     flex-direction: row;
@@ -415,4 +416,131 @@ body{
     background-color: transparent;
     cursor:pointer;
     padding:0px;
+}
+.order-container{
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    background-color: #ECEFF4;
+    box-shadow: 0 4px 5px #D8DEE9;
+}
+.order-thanks{
+    font-size: 30px;
+    color:#5E81AC;
+    margin-top: 0px;
+}
+
+
+
+
+.contenidoFooter {
+    margin-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: #ECEFF4;
+    box-shadow: 0 4px 5px inset #D8DEE9;
+
+}
+.contenidFooter2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    color: #5E81AC
+}
+.contenidoFooter1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: solid 3px #D8DEE9
+    ;
+    margin-bottom: 50px; 
+}
+.footerTitle {
+    font-size: 20px;
+    color:#5E81AC;
+}
+.footerInfo,
+.footerSupport,
+.footerSocials {
+    margin: 50px 100px;
+}
+.footerInfo ul,
+.footerSupport ul,
+.footerSocials ul{
+    list-style: none;
+    font-size: 20px; 
+    display: block;
+}
+.footerInfo li,
+.footerSupport li,
+.footerSocials li{
+margin-bottom: 15px;
+}
+.footerLink{
+    color: #8ca9d0;
+}
+.categoryTitle{
+    text-align: center;
+    font-size: 50px;
+}
+
+.form-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    margin: 100px auto;
+    font-size: 17px;
+    border-radius: 20px;
+    background-color: #ECEFF4;
+    box-shadow: 0 4px 5px #D8DEE9;
+    color:#5E81AC;
+    padding-bottom: 20px;
+}
+/* .form-contents{
+    display:flex;
+    height: 250px;
+    width: 250px;
+    margin:auto auto; 
+} */
+.row{
+    display:flex;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+.column{
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.completOrder-btn{
+    background-color: #5e81ace4 ;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    width: 450px;
+    height: 50px;
+}
+.completOrder-btn:hover{
+    transition-duration: 300ms;
+    background-color: #A3BE8C;
 }

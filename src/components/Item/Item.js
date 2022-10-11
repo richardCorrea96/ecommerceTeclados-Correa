@@ -1,5 +1,5 @@
 //esto es lo que se genera por cada uno de los productos
-import './styles.css'
+import '../../styles.css'
 import {Link} from 'react-router-dom'
 const Item = ({name, shortDesc,image, price, id}) => {
     return (

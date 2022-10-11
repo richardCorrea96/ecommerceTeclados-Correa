@@ -1,4 +1,4 @@
-import Item from './NavBar/Item';
+import Item from '../Item/Item';
 const ItemList = ({itemsList}) => {
     
 

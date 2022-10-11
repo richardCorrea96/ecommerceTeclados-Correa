@@ -1,9 +1,11 @@
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer'
-import ItemDetailContainter from './components/ItemDetailContainter';
-import CartContainer from './components/CartContainer';
+import Footer from './components/Footer/Footer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainter from './components/ItemDetailContainer/ItemDetailContainter';
+import CartContainer from './components/CartContainer/CartContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {CartProvider} from './context/CartContext';
+import {ToastContainer} from 'react-toastify'
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
               <Route path="/item/:productId" element={<ItemDetailContainter/>}/>
               <Route path="/cart" element={<CartContainer/>}/>
             </Routes>
+          <Footer/>
         </div>
+        <ToastContainer/>
       </BrowserRouter>
     </CartProvider>
   );

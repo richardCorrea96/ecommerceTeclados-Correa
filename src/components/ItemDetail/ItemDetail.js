@@ -1,22 +1,33 @@
-import './NavBar/styles.css'
-import ItemCount from './ItemCount'
+import '../../styles.css'
+import ItemCount from '../ItemCount/ItemCount'
 import {useState, useContext} from 'react';
 import {Link} from 'react-router-dom'
-import { CartContext } from '../context/CartContext';
-
+import { CartContext } from '../../context/CartContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 //correccion 
 
 
 const ItemDetail = (item) => {
 
+
     const {addItem} = useContext(CartContext);
     const [contador, setContador] = useState(0);
     
+
+    const addToast = () => toast.success("Product in cart 🛒!",
+    {
+        position: "bottom-right",
+        autoClose: 1500,
+        theme: "colored",
+
+    });
+
     const onAdd = (dato) =>{
-        console.log(`hizo click ${dato}`)
         setContador(dato)
         addItem(item, dato)
+        addToast()
     }
     return (
             <>
