@@ -57,6 +57,7 @@ export const CartProvider =({children})=> {
     }
     const clear =()=>{
         setProductCartList([]);
+        emptyToast()
     }
     const getTotalPrice =()=>{
         // after context, 00:35
