@@ -7,5 +7,4 @@ return (
     
 )
 }
-
 export default Title;

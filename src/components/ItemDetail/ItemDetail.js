@@ -30,24 +30,26 @@ const ItemDetail = (item) => {
         addToast()
     }
     return (
-            <>
-            <div className='ItemImgDetail'>
-                <img className='ImgDetail' src={item.image} alt={item.name}/>
+            
+            <div className="DetailContainer">
+                <div className='ItemImgDetail'>
+                    <img className='ImgDetail' src={item.image} alt={item.name}/>
+                </div>
+                <div className='ItemDetail'>
+                    <p className='nameDetail'>{item.name}</p>
+                    <p className='priceDetail'>$ {item.price}</p>
+                    <p className='descDetail'>{item.fullDesc}</p>
+                    {
+                        contador ?
+                        <div className="se-agrego-al-carrito">
+                            <Link to="/"> <button className='seguir-comprando'>Continue Shopping</button></Link>
+                            <Link to="/cart"><button className='ir-al-carrito'>Go to cart</button></Link>
+                        </div> :
+                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                    }
+                </div>
             </div>
-            <div className='ItemDetail'>
-                <p className='nameDetail'>{item.name}</p>
-                <p className='priceDetail'>$ {item.price}</p>
-                <p className='descDetail'>{item.fullDesc}</p>
-                {
-                    contador ?
-                    <div className="se-agrego-al-carrito">
-                        <Link to="/"> <button className='seguir-comprando'>Continue Shopping</button></Link>
-                        <Link to="/cart"><button className='ir-al-carrito'>Go to cart</button></Link>
-                    </div> :
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
-                }
-            </div>
-            </>
+        
 );
 };
 export default ItemDetail;

@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
         </div>
         <div class="contenidFooter2">
-            <p>© 2022 Mechboards - Mechboards Ltd is a company registered
+            <p>© 2022 MechKeebs - MechKeebs Ltd is a company registered
                 in England (Company No. 10949647) Exchange House,
                 Exchange Square, Beccles, NR34 9HH. VAT No: 350501346</p>
         </div>

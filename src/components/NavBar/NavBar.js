@@ -1,6 +1,5 @@
 import '../../styles.css'
 import logo from '../../images/logo.png';
-import userIcon from '../../images/user.png'
 import CartWidget from './CartWidget/CartWidget'
 import {Link, NavLink} from 'react-router-dom'
 const NavBar = () => {
@@ -30,9 +29,6 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-right">
-                <div className="login-navBar">
-                        <img className='userIcon' src={userIcon} alt='user'/>
-                </div>
                 <Link to="/cart">                
                     <div className="cart-navBar"><CartWidget /> </div>
                 </Link>

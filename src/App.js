@@ -6,6 +6,7 @@ import CartContainer from './components/CartContainer/CartContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {CartProvider} from './context/CartContext';
 import {ToastContainer} from 'react-toastify'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
               <Route path="/item/:productId" element={<ItemDetailContainter/>}/>
               <Route path="/cart" element={<CartContainer/>}/>
+              <Route path="*" element={<ErrorPage/>}/>
             </Routes>
           <Footer/>
         </div>

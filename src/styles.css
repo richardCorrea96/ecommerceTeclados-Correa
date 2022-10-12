@@ -89,6 +89,7 @@ body{
     display:flex;
     width: 730px;
     height: 730px;
+    margin-right: 50px;
 }
 .ImgDetail{
     display:flex;
@@ -137,7 +138,7 @@ body{
 .Loading{
     font-size: 30px;
     color:#5E81AC;
-    margin: 0px auto;
+    margin: 100px auto;
 }
 .productCard{
     margin-bottom: 20px;
@@ -287,7 +288,7 @@ body{
 .opiti{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 .removeItem{
     width: 30px;
@@ -543,4 +544,35 @@ input{
 .completOrder-btn:hover{
     transition-duration: 300ms;
     background-color: #A3BE8C;
+}
+.errorImage{
+    margin: 100px auto;
+    width: 650px;
+}
+.errorContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.backHome-btn{
+    background-color: #5e81ace4 ;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    width: 300px;
+    height: 50px;
+}
+.backHome-btn:hover{
+    transition-duration: 300ms;
+    background-color: #A3BE8C;
+}
+.DetailContainer{
+    display:flex;
+    justify-content: space-around;
+    margin: 50px 0px;
 }
