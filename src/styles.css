@@ -262,7 +262,7 @@ body{
     transition-duration: 300ms;
     background-color: #A3BE8C;
 }
-.xd{
+.inCart{
 
     margin: auto;
     width: 70%;
@@ -285,7 +285,7 @@ body{
     flex-direction: row;
     align-items: center;
 }
-.opiti{
+.productContainer{
     display: flex;
     flex-direction: column;
     margin-top: 60px;
@@ -553,7 +553,6 @@ input{
     display:flex;
     flex-direction: column;
     align-items: center;
-
 }
 .backHome-btn{
     background-color: #5e81ace4 ;
@@ -575,4 +574,76 @@ input{
     display:flex;
     justify-content: space-around;
     margin: 50px 0px;
+}
+.homeContainer{
+    display:flex;
+    flex-direction: row;
+    margin-top: 80px;
+    width: 100%;
+    height: 785px;
+}
+.homeTitleDescriptionContainer{
+    width: 50%;
+}
+.homeTitleContainer{
+    margin: 80px 110px;
+    color: #81A1C1;
+    font-size: 20px;
+}
+.titleLine1{
+    font-size: 90px;
+    margin: 0px;
+    color: #5E81AC;
+}
+.titleLine2{
+    font-size: 90px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 100px;
+    color: #5E81AC;
+}
+.titleLine3{
+    font-size: 90px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 282px;
+    color: #5E81AC;
+}
+.homeDescription{
+    margin: 70px 110px;
+    color:#81A1C1;
+    font-size: 20px;
+}
+.ourProducts-btnContainer{
+    display: flex;
+    justify-content: center;
+    margin: auto 0px;
+}
+.ourProducts-btn{
+    background-color: #88C0D0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    width: 200px;
+    height: 50px;
+}
+.ourProducts-btn:hover{
+    transition-duration: 300ms;
+    background-color: #A3BE8C;
+}
+.homImgContainer{
+    width: 50%;
+    align-items: flex-end;
+}
+.homeImg{
+    max-width:100%;
+    max-height:100%;
+    border-radius: 50px 0px 0px 50px;
+    box-shadow: 0 4px 5px #D8DEE9;
+    margin-left: 6px;
+    padding: 0px
 }

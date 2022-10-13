@@ -61,9 +61,9 @@ const CartContainer = () => {
                         
                         checkOut == false ?
                         <>
-                        <div className="opiti">
+                        <div className="productContainer">
                         {productCartList.map(item =>(
-                            <div key={item.id} className="xd">
+                            <div key={item.id} className="inCart">
                                 <div className="nombreImagen">
                                     <img className="imgInCart" src={item.image} alt={item.name}/>
                                     <p>{item.name}</p>

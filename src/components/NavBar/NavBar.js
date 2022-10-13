@@ -13,6 +13,8 @@ const NavBar = () => {
                 <div>
                     <ul>
                         <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"}
+                        to="/allproducts">All</NavLink></li>
+                        <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"}
                         to="/category/keyboards">Keyboards</NavLink></li>
                         <li><NavLink className={({isActive})=> isActive ? "classActive" : "classInactive"}
                         to="/category/keycaps">Keycaps</NavLink></li>

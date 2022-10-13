@@ -67,7 +67,6 @@ export const CartProvider =({children})=> {
     const getTotalProducts =()=>{
         const totalProducts = productCartList.reduce((acc, item)=>acc + item.quantity, 0);
         return totalProducts;
-
     }
     return(
         <CartContext.Provider value={{productCartList, addItem, removeItem,clear,
