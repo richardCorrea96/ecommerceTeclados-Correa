@@ -6,6 +6,7 @@ import '../../styles.css'
 import {useParams} from 'react-router-dom'
 import {db} from '../../utils/firebase'
 import {collection, getDocs, query, where } from 'firebase/firestore'
+import loading from '../../images/loading.gif'
 
 import Title from '../Title/Title'
 
@@ -50,7 +51,9 @@ import Title from '../Title/Title'
         <div id='ItemListContainer'>
             {items.length > 0 ?
             (<ItemList itemsList ={items}/>):
-            (<div className='Loading'>Loading...</div>)}
+            (<div className='loading'>
+                <img src={loading}/>
+            </div>)}
         </div>
     </>
     );

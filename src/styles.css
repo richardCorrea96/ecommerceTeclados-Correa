@@ -135,9 +135,7 @@ body{
 .title{
     font-size: 50px;
 }
-.Loading{
-    font-size: 30px;
-    color:#5E81AC;
+.loading{
     margin: 100px auto;
 }
 .productCard{
