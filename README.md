@@ -8,4 +8,3 @@ Check our products, and make your endgame keeb today!
 
 # How to buy:
 
-<img src="https://imgur.com/iMCR8Oi"/>
