@@ -42,7 +42,7 @@ const ItemDetail = (item) => {
                     {
                         contador ?
                         <div className="se-agrego-al-carrito">
-                            <Link to="/"> <button className='seguir-comprando'>Continue Shopping</button></Link>
+                            <Link to="/allproducts"> <button className='seguir-comprando'>Continue Shopping</button></Link>
                             <Link to="/cart"><button className='ir-al-carrito'>Go to cart</button></Link>
                         </div> :
                         <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
