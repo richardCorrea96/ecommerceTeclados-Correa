@@ -8,3 +8,4 @@ Check our products, and make your endgame keeb today!
 
 # How to buy:
 
+![buy](https://github.com/richardCorrea96/ecommerceTeclados-Correa/blob/main/public/buy.gif)
