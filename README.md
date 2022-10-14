@@ -8,4 +8,4 @@ Check our products, and make your endgame keeb today!
 
 # How to buy:
 
-[buy](https://i.imgur.com/iMCR8Oi.gif)
+![](https://i.imgur.com/iMCR8Oi.gif)
