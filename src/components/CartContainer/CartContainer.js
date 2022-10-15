@@ -112,7 +112,7 @@ const CartContainer = () => {
                         confirmButtonColor: '#5e81ace4',
                         borderRadius: '100',
                     }).then(()=>{
-                        window.location = "http://localhost:3000/";
+                        window.location = "https://ecommerce-teclados-correa.vercel.app/";
                     })}
                     </div>
                     :
